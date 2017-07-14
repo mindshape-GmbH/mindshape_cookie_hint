@@ -1,0 +1,10 @@
+plugin.tx_mindshapecookiehint {
+  view {
+    # cat=plugin.tx_mindshapecookiehint/file//10; type=string; label=Path to template root (FE)
+    templateRootPath = EXT:mindshape_cookie_hint/Resources/Private/Templates/
+    # cat=plugin.tx_mindshapecookiehint/file; type=string; label=Path to template partials (FE)
+    partialRootPath = EXT:mindshape_cookie_hint/Resources/Private/Partials/
+    # cat=plugin.tx_mindshapecookiehint/file; type=string; label=Path to template layouts (FE)
+    layoutRootPath = EXT:mindshape_cookie_hint/Resources/Private/Layouts/
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="MshCookies">
+		<header/>
+		<body>
+			<trans-unit id="hint.learnMore">
+				<target>Weitere Informationen.</target>
+			</trans-unit>
+			<trans-unit id="hint.dismiss">
+				<target>OK</target>
+			</trans-unit>
+			<trans-unit id="hint.message">
+				<target>Diese Webseite verwendet Cookies, um die Bedienfreundlichkeit zu erhöhen.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
