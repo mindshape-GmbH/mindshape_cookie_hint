@@ -260,7 +260,7 @@
 
             if (this.options.appendToBottom) {
                 window.addEventListener("load", function () {
-                    document.body.className = "cookie-padding";
+                    document.body.classList.add("cookie-padding");
                 });
             }
 
@@ -343,7 +343,7 @@
             evt.preventDefault && evt.preventDefault();
             evt.returnValue = false;
             if (this.options.appendToBottom) {
-                document.body.className = "";
+                document.body.classList.remove("cookie-padding");
             }
             this.setDismissedCookie();
             this.container.removeChild(this.element);
