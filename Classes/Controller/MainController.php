@@ -1,4 +1,5 @@
 <?php
+
 namespace Mindshape\MindshapeCookieHint\Controller;
 
 /***************************************************************
@@ -25,7 +26,9 @@ namespace Mindshape\MindshapeCookieHint\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
@@ -49,12 +52,11 @@ class MainController extends ActionController
 
         $style = $css . '-' . $position;
 
-        $this->response->addAdditionalHeaderData(
-            '<link rel="stylesheet" type="text/css" media="all"  href="' .
-            GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST') .
-            '/typo3conf/ext/mindshape_cookie_hint/Resources/Public/Css/' . $style . '.css" />'
-        );
+        $extensionKey = $this->request->getControllerExtensionKey();
+        $cssFile = ExtensionManagementUtility::siteRelPath($extensionKey) . '/Resources/Public/Css/' . $style . '.css';
 
-        $this->view->assign('style', $style);
+        /** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
+        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+        $pageRenderer->addCssFile($cssFile);
     }
 }
