@@ -9,6 +9,7 @@ plugin.tx_mindshapecookiehint {
     style = dark
     position = bottom
     appendToBottom = 0
+    doNotLoadCss = 0
   }
 }
 

@@ -49,11 +49,13 @@ class MainController extends ActionController
 
         $style = $css . '-' . $position;
 
-        $this->response->addAdditionalHeaderData(
-            '<link rel="stylesheet" type="text/css" media="all"  href="' .
-            GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST') .
-            '/typo3conf/ext/mindshape_cookie_hint/Resources/Public/Css/' . $style . '.css" />'
-        );
+        if ( $this->settings['doNotLoadCss'] != 1 ) {
+            $this->response->addAdditionalHeaderData(
+                '<link rel="stylesheet" type="text/css" media="all"  href="' .
+                GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST') .
+                '/typo3conf/ext/mindshape_cookie_hint/Resources/Public/Css/' . $style . '.css" />'
+            );
+        }
 
         $this->view->assign('style', $style);
     }

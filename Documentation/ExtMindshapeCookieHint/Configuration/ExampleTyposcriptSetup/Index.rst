@@ -42,6 +42,9 @@ The following example shows all usable settings for the extension:
 		readmore = 35
 		#append the cookie to the bottom of your page so it doesn't overlap footer-content
 		appendToBottom = 0
+		#do not load the included css stylesheet
+		#if activated (doNotLoadCss = 1) you have to add the needed styles in your theme
+		doNotLoadCss = 0
 	  }
 	  
 	  _LOCAL_LANG.de {
