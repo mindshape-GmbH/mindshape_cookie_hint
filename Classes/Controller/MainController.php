@@ -39,22 +39,5 @@ class MainController extends ActionController
      */
     public function cookieAction()
     {
-        $position = $this->settings['position'] === 'top'
-            ? 'top'
-            : 'bottom';
-
-        $css = $this->settings['style'] === 'light'
-            ? 'light'
-            : 'dark';
-
-        $style = $css . '-' . $position;
-
-        $this->response->addAdditionalHeaderData(
-            '<link rel="stylesheet" type="text/css" media="all"  href="' .
-            GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST') .
-            '/typo3conf/ext/mindshape_cookie_hint/Resources/Public/Css/' . $style . '.css" />'
-        );
-
-        $this->view->assign('style', $style);
     }
 }
