@@ -1,8 +1,11 @@
 plugin.tx_mindshapecookiehint {
   view {
-    templateRootPath = {$plugin.tx_mindshapecookiehint.view.templateRootPath}
-    partialRootPath = {$plugin.tx_mindshapecookiehint.view.partialRootPath}
-    layoutRootPath = {$plugin.tx_mindshapecookiehint.view.layoutRootPath}
+    templateRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Templates/
+    templateRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.templateRootPath}
+    partialRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Partials/
+    partialRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.partialRootPath}
+    layoutRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Layouts/
+    layoutRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.layoutRootPath}
   }
 
   settings {
