@@ -24,7 +24,7 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'mindshape Cookie Hint',
     'description' => 'Shows a visible hint on the website that cookies are used - according to the European laws. Easy to install, fully customizable and the hint will permanently be hidden after accepting.',
     'category' => 'fe',
@@ -34,14 +34,13 @@ $EM_CONF[$_EXTKEY] = array(
     'createDirs' => '',
     'clearcacheonload' => true,
     'author' => 'mindshape GmbH',
-    'author_email' => 'dieter@mindshape.de',
+    'author_email' => 'dorndorf@mindshape.de',
     'author_company' => 'mindshape GmbH',
-    'constraints' => array(
-        'depends' => array(
+    'constraints' => [
+        'depends' => [
             'typo3' => '6.2.0-8.7.99',
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
-);
-
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];

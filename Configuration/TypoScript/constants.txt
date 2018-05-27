@@ -10,6 +10,10 @@ plugin.tx_mindshapecookiehint {
 
   # customsubcategory=settings=Settings
   settings {
+    # cat=mindshape_cookie_hint/settings; type=int; label=Expiry days used for the cookie
+    expiryDays = 365
+    # cat=mindshape_cookie_hint/settings; type=boolean; label=Append cookie banner to bottom (adds cookie banner sized padding to the body)
+    appendToBottom = 0
     # cat=mindshape_cookie_hint/settings; type=options[Dark Bottom=dark-bottom,Dark Top=dark-top,Light Bottom=light-bottom,Light Top=light-top]; label=Style for the cookie banner
     style = dark-bottom
   }

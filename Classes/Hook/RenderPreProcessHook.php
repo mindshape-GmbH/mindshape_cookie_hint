@@ -1,10 +1,11 @@
 <?php
-namespace Mindshape\MindshapeCookieHint\Controller;
+namespace Mindshape\MindshapeCookieHint\Hook;
 
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2017 Christoph Dieter <dieter@mindshape.de>, mindshape GmbH
+ *  (c) 2018 Christoph Dieter <dieter@mindshape.de>, mindshape GmbH
+ *           Daniel Dorndorf <dorndorf@mindshape.de>, mindshape GmbH
  *
  *  All rights reserved
  *
@@ -25,19 +26,29 @@ namespace Mindshape\MindshapeCookieHint\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use Mindshape\MindshapeCookieHint\Service\CookieHintOptionsService;
+use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * @package mindshape_cookie_hint
+ * @package MindshapeCookieHint
+ * @subpackage Hook
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class MainController extends ActionController
+class RenderPreProcessHook
 {
+    const TYPO3_MODE_FRONTEND = 'FE';
+
     /**
-     * @return void
+     * @param array $params
+     * @param \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer
      */
-    public function cookieAction()
+    public function main(array &$params, PageRenderer $pageRenderer)
     {
+        if (self::TYPO3_MODE_FRONTEND === TYPO3_MODE) {
+            /** @var \Mindshape\MindshapeCookieHint\Service\CookieHintOptionsService $cookieHintOptionsService */
+            $cookieHintOptionsService = GeneralUtility::makeInstance(CookieHintOptionsService::class, $pageRenderer);
+            $cookieHintOptionsService->addCookieHintToPage();
+        }
     }
 }
