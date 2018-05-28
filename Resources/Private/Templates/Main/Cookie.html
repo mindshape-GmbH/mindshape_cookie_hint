@@ -1,0 +1,22 @@
+<html data-namespace-typo3-fluid="true" lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+  <script>
+    window.cookieconsent_options = {
+      expiryDays: <f:format.raw>{settings.expiryDays}</f:format.raw>,
+      <f:if condition="{settings.readmore}">
+        learnMore: '<f:translate key="hint.learnMore" />',
+      </f:if>
+      dismiss: '<f:translate key="hint.dismiss" />',
+      message: '<f:translate key="hint.message" />',
+      <f:if condition="{settings.readmore}">
+        link: '<f:uri.page pageUid="{settings.readmore}" />',
+      </f:if>
+      <f:if condition="{settings.appendToBottom}">
+      appendToBottom: true
+      </f:if>
+    };
+  </script>
+
+</html>

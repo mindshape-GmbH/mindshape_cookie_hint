@@ -17,3 +17,14 @@ plugin.tx_mindshapecookiehint {
 
 page.includeJSFooter.mindshapecookiehint = EXT:mindshape_cookie_hint/Resources/Public/Js/cookieconsent.js
 page.includeCSS.mindshapecookiehint = EXT:mindshape_cookie_hint/Resources/Public/Css/{$plugin.tx_mindshapecookiehint.settings.style}.css
+
+page.9877 = USER
+page.9877 {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  pluginName = Main
+  extensionName = MindshapeCookieHint
+  vendorName = Mindshape
+  action = cookie
+  view < plugin.tx_mindshape_cookie_hint.view
+  persistence < plugin.tx_mindshapecookiehint.persistence
+}

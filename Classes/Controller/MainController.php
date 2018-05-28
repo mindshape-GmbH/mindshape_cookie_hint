@@ -1,5 +1,5 @@
 <?php
-namespace Mindshape\MindshapeCookieHint\Hook;
+namespace Mindshape\MindshapeCookieHint\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -26,29 +26,18 @@ namespace Mindshape\MindshapeCookieHint\Hook;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use Mindshape\MindshapeCookieHint\Service\CookieHintOptionsService;
-use TYPO3\CMS\Core\Page\PageRenderer;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * @package MindshapeCookieHint
- * @subpackage Hook
+ * @package mindshape_cookie_hint
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class RenderPreProcessHook
+class MainController extends ActionController
 {
-    const TYPO3_MODE_FRONTEND = 'FE';
-
     /**
-     * @param array $params
-     * @param \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer
+     * @return void
      */
-    public function main(array &$params, PageRenderer $pageRenderer)
+    public function cookieAction()
     {
-        if (self::TYPO3_MODE_FRONTEND === TYPO3_MODE) {
-            /** @var \Mindshape\MindshapeCookieHint\Service\CookieHintOptionsService $cookieHintOptionsService */
-            $cookieHintOptionsService = GeneralUtility::makeInstance(CookieHintOptionsService::class, $pageRenderer);
-            $cookieHintOptionsService->addCookieHintToPage();
-        }
     }
 }
