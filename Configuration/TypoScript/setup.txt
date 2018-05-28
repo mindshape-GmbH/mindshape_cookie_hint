@@ -11,6 +11,7 @@ plugin.tx_mindshapecookiehint {
   settings {
     expiryDays = {$plugin.tx_mindshapecookiehint.settings.expiryDays}
     appendToBottom = {$plugin.tx_mindshapecookiehint.settings.appendToBottom}
+    readmore = {$plugin.tx_mindshapecookiehint.settings.readmore}
   }
 }
 
