@@ -6,10 +6,10 @@
     window.cookieconsent_options = {
       expiryDays: <f:format.raw>{settings.expiryDays}</f:format.raw>,
       <f:if condition="{settings.readmore}">
-        learnMore: '<f:translate key="hint.learnMore" />',
+        learnMore: '<f:format.htmlspecialchars><f:translate key="hint.learnMore" /></f:format.htmlspecialchars>',
       </f:if>
-      dismiss: '<f:translate key="hint.dismiss" />',
-      message: '<f:translate key="hint.message" />',
+      dismiss: '<f:format.htmlspecialchars><f:translate key="hint.dismiss" /></f:format.htmlspecialchars>',
+      message: '<f:format.htmlspecialchars><f:translate key="hint.message" /></f:format.htmlspecialchars>',
       <f:if condition="{settings.readmore}">
         link: '<f:uri.page pageUid="{settings.readmore}" />',
       </f:if>
