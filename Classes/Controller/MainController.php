@@ -27,6 +27,7 @@ namespace Mindshape\MindshapeCookieHint\Controller;
  ***************************************************************/
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
@@ -53,7 +54,7 @@ class MainController extends ActionController
         $style = $css . '-' . $position;
 
         $extensionKey = $this->request->getControllerExtensionKey();
-        $cssFile = ExtensionManagementUtility::siteRelPath($extensionKey) . '/Resources/Public/Css/' . $style . '.css';
+        $cssFile = PathUtility::stripPathSitePrefix(ExtensionManagementUtility::extPath($extensionKey)) . '/Resources/Public/Css/' . $style . '.css';
 
         /** @var \TYPO3\CMS\Core\Page\PageRenderer $pageRenderer */
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);

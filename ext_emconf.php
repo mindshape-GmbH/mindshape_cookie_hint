@@ -28,7 +28,7 @@ $EM_CONF[$_EXTKEY] = array(
     'title' => 'mindshape Cookie Hint',
     'description' => 'Shows a visible hint on the website that cookies are used - according to the European laws. Easy to install, fully customizable and the hint will permanently be hidden after accepting.',
     'category' => 'fe',
-    'version' => '1.0.11',
+    'version' => '1.1.0',
     'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
@@ -38,7 +38,7 @@ $EM_CONF[$_EXTKEY] = array(
     'author_company' => 'mindshape GmbH',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '6.2.0-8.7.99',
+            'typo3' => '9.5.0-10.3.99',
         ),
         'conflicts' => array(),
         'suggests' => array(),

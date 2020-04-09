@@ -17,7 +17,7 @@ page.includeJSFooter.mindshapecookiehint = EXT:mindshape_cookie_hint/Resources/P
 page.9877 = USER
 page.9877 {
   userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-  pluginName = Main
+  pluginName = CookieHint
   extensionName = MindshapeCookieHint
   vendorName = Mindshape
   action = cookie
