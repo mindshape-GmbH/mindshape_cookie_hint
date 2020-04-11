@@ -5,8 +5,7 @@ namespace Mindshape\MindshapeCookieHint\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2018 Christoph Dieter <dieter@mindshape.de>, mindshape GmbH
- *           Daniel Dorndorf <dorndorf@mindshape.de>, mindshape GmbH
+ *  (c) 2017 Christoph Dieter <dieter@mindshape.de>, mindshape GmbH
  *
  *  All rights reserved
  *

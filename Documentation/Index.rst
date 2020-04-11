@@ -22,7 +22,7 @@ EXT: mindshape Cookie Hint
       2015-07-15
 
 :Changed:
-      2019-01-10
+      2015-07-31
 
 :Classification:
       mindshape_cookie_hint

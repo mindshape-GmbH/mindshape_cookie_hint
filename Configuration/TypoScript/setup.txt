@@ -1,22 +1,18 @@
 plugin.tx_mindshapecookiehint {
   view {
-    templateRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Templates/
-    templateRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.templateRootPath}
-    partialRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Partials/
-    partialRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.partialRootPath}
-    layoutRootPaths.0 = EXT:mindshape_cookie_hint/Resources/Private/Layouts/
-    layoutRootPaths.1 = {$plugin.tx_mindshapecookiehint.view.layoutRootPath}
+    templateRootPath = {$plugin.tx_mindshapecookiehint.view.templateRootPath}
+    partialRootPath = {$plugin.tx_mindshapecookiehint.view.partialRootPath}
+    layoutRootPath = {$plugin.tx_mindshapecookiehint.view.layoutRootPath}
   }
 
   settings {
-    expiryDays = {$plugin.tx_mindshapecookiehint.settings.expiryDays}
-    appendToBottom = {$plugin.tx_mindshapecookiehint.settings.appendToBottom}
-    readmore = {$plugin.tx_mindshapecookiehint.settings.readmore}
+    style = dark
+    position = bottom
+    appendToBottom = 0
   }
 }
 
 page.includeJSFooter.mindshapecookiehint = EXT:mindshape_cookie_hint/Resources/Public/Js/cookieconsent.js
-page.includeCSS.mindshapecookiehint = EXT:mindshape_cookie_hint/Resources/Public/Css/{$plugin.tx_mindshapecookiehint.settings.style}.css
 
 page.9877 = USER
 page.9877 {
