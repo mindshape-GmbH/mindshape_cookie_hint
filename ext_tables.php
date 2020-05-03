@@ -4,11 +4,11 @@ if(!defined('TYPO3_MODE')) {
 }
 
 // TypoScript
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'mindshape Cookie Hint');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('mindshape_cookie_hint', 'Configuration/TypoScript', 'mindshape Cookie Hint');
 
 // Plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	$_EXTKEY,
+	'mindshape_cookie_hint',
 	'Main',
 	'Cookies'
 );

@@ -4,7 +4,7 @@ if(!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'Msh.' . $_EXTKEY,
+	'Mindshape.MindshapeCookieHint',
 	'Main',
 	array(
 		'Main' => 'cookie',
