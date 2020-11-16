@@ -18,6 +18,7 @@
 ChangeLog
 ---------
 
+\- v1.0.0 Add support for TYPO3 10.4.xx
 \- v1.0.14 Add support for TYPO3 9.5.xx
 \- v1.0.8 Additional functionality (appendToBottom)
 \- v1.0.5 Implementation will now be cached
