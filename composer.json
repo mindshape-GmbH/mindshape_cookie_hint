@@ -4,9 +4,8 @@
   "description": "Shows a visible hint on the website that cookies are used - according to the European laws. Easy to install, fully customizable and the hint will permanently be hidden after accepting.",
   "homepage": "https://mindshape.de",
   "license": [
-    "GPL-2.0+"
+    "GPL-2.0-or-later"
   ],
-  "version": "1.1.0",
   "require": {
     "typo3/cms-core": "^9.5||^10.4"
   },
@@ -16,6 +15,6 @@
     }
   },
   "replace": {
-    "mindshape_cookie_hint": "*"
+    "typo3-ter/mindshape_cookie_hint": "*"
   }
 }
