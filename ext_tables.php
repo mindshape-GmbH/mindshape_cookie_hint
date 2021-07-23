@@ -8,7 +8,7 @@ if(!defined('TYPO3_MODE')) {
 
 // Plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'mindshape_cookie_hint',
+	'MindshapeCookieHint',
 	'Main',
 	'Cookies'
 );

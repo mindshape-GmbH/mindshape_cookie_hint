@@ -4,12 +4,8 @@ if(!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'Mindshape.MindshapeCookieHint',
+	'MindshapeCookieHint',
 	'Main',
-	array(
-		'Main' => 'cookie',
-	),
-	// non-cacheable actions
-	array(
-	)
+	[\Mindshape\MindshapeCookieHint\Controller\MainController::class => 'cookie'],
+	[]
 );
